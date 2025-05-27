@@ -64,4 +64,23 @@ void dokter ::tambahPasien(pasien* nPasien){
         cout << endl;
     }
 
-    
+    int main() {
+        dokter* varDokter1 = new dokter("dr.Budi");
+        dokter* varDokter2 = new dokter("dr.Tudi");
+        pasien* varPasien1 = new pasien("Rehan");
+        pasien* varPasien2 = new pasien("Budi");
+
+        varPasien1->tambahDokter(varDokter1);
+        varPasien2->tambahDokter(varDokter2);
+        varPasien1->tambahDokter(varDokter1);
+
+        varDokter1->cetakPasien();
+        varDokter2->cetakPasien();
+        varPasien1->cetakDokter();
+        varPasien2->cetakDokter();
+
+        delete varPasien1;
+        delete varPasien2;
+        delete varDokter1;
+        delete varDokter2;
+    }
